@@ -4,6 +4,31 @@
 
   <head>
     <head>
+
+      <title> My Daily Activities</title>
+<script type=”text/javascript” src=https://www.gstatic.com/charts/loader.js></script>
+      <div id-"chart_div"></div>
+<script type=”text/javascript”>
+google.charts.load(‘current’, { ‘packages’ : [‘corechart’] });
+google.charts.setOnLoadCallback(drawChart);
+  
+function drawChart() {
+   var data = google.visualization.arrayToDataTable([
+      [‘Task’, ‘Hours per Day’],
+      [‘Work’, 8],
+      [‘Sleep’, 8],
+      [‘Eat’, 2],
+      [‘Study’, 4],
+      [‘Exercise’, 2]
+    ]);
+    var options = {
+       title: ‘My Daily Activities’
+    };
+    var chart = new google.visualization.PieChart(document.getElementById(‘chart_div’));
+    chart.draw(data, options);
+}
+</script>
+  
   <h2> <img src="WebBanner2023.png" alt="Banne" width="1200" height="300"> </h2>
       <h1><b>ENG0018 Computer Laboratory 2025/26</b></h1>
       <h2>Student URN: 6849641</h2>
