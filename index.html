@@ -182,10 +182,10 @@ function drawChart() {
 </button>
 <script>
     async function getLastUpdatedTime() {
-        const username = '6849641';
-        const repo = 'fs00807';
+        const username = 'fs00807';
+        const repo = '6849641';
        
-        const url = `https://api.github.com/repos/${6849641}/${fs00807}/commits`;
+        const url = `https://api.github.com/repos/${username}/${repo}/commits`;
         try {
             const response = await fetch(url, {
                 method: 'GET',
