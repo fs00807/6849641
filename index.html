@@ -171,6 +171,52 @@ function drawChart() {
 </p>
 
 
+  <div id= "Last-updated"> Loading last update time...</div>
+
+  <!--Verify Button-->
+  <Button onclick-"verifyLastupdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
+    Verify Last Modified Time
+  </Button>
+
+  <script>
+    async function getLastUpdateTime() {
+const username = '6849641'
+  const repo = 'index.html'
+const Url - https://apl-fithub.com/repos/$/(6849641)/$(index.html)/commits";
+  try {
+  const response = await fetch(url), {
+  method: 'GET',
+  headers: {
+  'Accept': 'application/vnd.github.v3+json',
+    }
+  });
+if (!response.ok) {
+  throw new error ('Error fetching data: ${reponse.status} - ${response.statusText}');
+  }
+  const commits = await response.json();
+    if (comits && commits.length > 0) {
+      const lastCommitDate = new date(commits[0].commit.committer.date);
+
+      //Displaying the the on load
+      document.getElementById('last-updated').innerText = 'Last Modified Time: ${lastCommitDate.toLocaleString()}';
+    } else {
+      document.getElementById('last-updated').innerText = 'No commits found in the repository.';
+    }
+  } catch (error) {
+    console.error(Error fetching the last updated time:', error);
+      document.getElementById('last=updated').innertext = 'Error fetching update time. Please check the repository details.';
+  }
+    }
+    //Function to verify the last update time by re-fetching it from the API
+    async fuctions veryfiLastUpdateTime() {
+      document.getElementById('last-update')innertext = 'Verifying...';
+      alert("last modified time has been successfully verified from GitHub API.");
+    }
+    // Initial load to dsiplay the time on page load 
+    window.onload = getLastUpdateTime;
+     </script>
+
+
 </body>
 </style>
 </html>
