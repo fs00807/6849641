@@ -101,7 +101,7 @@
 
   
   <h3 id="Analysis">Analysis</h3>
-  <p id="Analysis_InText">
+  <p id="Analysis1_InText">
     
 Fractals may be aesthetic, however they are much more mathematical, unlike the clean and orderly lines in Euclidean geometry, fractals usually possess dimensions that are 
     non-integers or don’t fit into a fraction. While a line is one-dimensional and a plane is two-dimensional, a fractal may have a dimension of 1.25 or 1.8, meaning it lies
@@ -110,7 +110,7 @@ One way to measure the fractal dimension is through the box counting method:
 
 <h2><img src="equation.png"alt=width="300"height="150"></h2>
 
-  <p id="Analysis_InText">
+  <p id="Analysis2_InText">
     
 The equation N(ε) represents the number of boxes of size (ε) needed to cover the shape (El-Shaarawi & Piegorsch, 2002). The number of boxes increase faster as they get smaller,
     the more complex the shape gets, the higher its fractal dimension will be (Sander, 1987).
@@ -153,9 +153,6 @@ The equation N(ε) represents the number of boxes of size (ε) needed to cover t
     structured.Chaos theory and fractal geometry together show that the apparent disorder of the world follows deep mathematical rules.The same equations that generate the delicate structure 
     of a snowflake can also describe the growth of a galaxy. This contrast makes fractal geometry a revolutionary extension of classical mathematics. Where Euclid drew with a ruler and compass,
     fractal geometry draws with recursion and chaos; tools capable of capturing the infinite variety of the natural world.
-
-    
-
 </p>
 
   Table 1: Different fractal dimensions in nature
@@ -274,9 +271,10 @@ The equation N(ε) represents the number of boxes of size (ε) needed to cover t
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
     const IntroductionCount = displayWordCount("Introduction_InText");
-    const AnalysisCount = displayWordCount("Analysis_InText");
+    const Analysis1Count = displayWordCount("Analysis1_InText");
+    const Analysis2Count = displayWordCount("Analysis2_InText");
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AnalysisCount;
+    const totalWordCount = IntroductionCount + Analysis1Count + Analysis2Count;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
